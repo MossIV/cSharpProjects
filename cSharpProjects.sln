@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Guided-project-branching-looping-CSharp-main", "Guided-project-branching-looping-CSharp-main", "{C0C57D7E-22CF-418C-85C4-1ADE0A1DE186}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GuidedProject", "GuidedProject", "{7B0DED13-74D2-419B-AD69-970D9A700DC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final", "Guided-project-branching-looping-CSharp-main\GuidedProject\Final\Final.csproj", "{DC54227E-0A67-442F-BCB1-B2D456794198}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Starter", "Guided-project-branching-looping-CSharp-main\GuidedProject\Starter\Starter.csproj", "{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC54227E-0A67-442F-BCB1-B2D456794198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC54227E-0A67-442F-BCB1-B2D456794198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC54227E-0A67-442F-BCB1-B2D456794198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC54227E-0A67-442F-BCB1-B2D456794198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B0DED13-74D2-419B-AD69-970D9A700DC4} = {C0C57D7E-22CF-418C-85C4-1ADE0A1DE186}
+		{DC54227E-0A67-442F-BCB1-B2D456794198} = {7B0DED13-74D2-419B-AD69-970D9A700DC4}
+		{1F746604-73B6-4B77-9A7A-DCC5D6D1FA9E} = {7B0DED13-74D2-419B-AD69-970D9A700DC4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E595FFB-C536-41DC-8704-CFE6C42023B7}
+	EndGlobalSection
+EndGlobal
