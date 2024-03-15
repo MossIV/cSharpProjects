@@ -328,7 +328,77 @@ do
 
         case "5":
             // Edit an animal’s age
-            Console.WriteLine("UNDER CONSTRUCTION - please check back next month to see progress.");
+            bool exitFlag = false;
+            Console.WriteLine("Which animal's age do you want to edit?");
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    Console.WriteLine(ourAnimals[i, 0] + ", " + ourAnimals[i, 3]);
+                }
+            }
+            Console.WriteLine("Please type the ID of the dog you want to edit or type 'exit' to exit");
+            validEntry = false;
+            int? selectedAnimal = null;
+            do
+            {
+                readResult = Console.ReadLine();
+                if (readResult != null)
+                {
+                    for (int i = 0; i < maxPets; i++)
+                    {
+                        if (ourAnimals[i, 0].Contains(readResult.ToLower()))
+                        {
+                            selectedAnimal = i;
+                            validEntry = true;
+                            break;
+                        }
+                    }
+                    if (selectedAnimal == null)
+                    {
+                        if (readResult.ToLower() == "exit")
+                        {
+                            validEntry = true;
+                            exitFlag = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("That is not a valid option please try again");
+                        }
+                    }
+
+                }
+            }
+            while (!validEntry);
+
+            if (!exitFlag && (selectedAnimal != null))
+            {
+                string name = ourAnimals[(int)selectedAnimal, 3];
+                string currentAge = ourAnimals[(int)selectedAnimal, 2];
+                currentAge = currentAge.Split("Age: ")[1];
+                name = name.Split("Nickname: ")[1];
+                Console.WriteLine($"{name} is currently {currentAge}");
+                Console.WriteLine($"What will be {name}'s new age");
+                int newAge = -1;
+                validEntry = false;
+                do
+                {
+                    readResult = Console.ReadLine();
+                    if (readResult != null)
+                    {
+                        validEntry = int.TryParse(readResult, out newAge);
+                        if (newAge <= 0)
+                        {
+                            validEntry = false;
+                        }
+                        if(!validEntry){
+                            Console.WriteLine("That is not a valid option please try again");
+                        }
+                    }
+                } while (!validEntry);
+                ourAnimals[(int)selectedAnimal, 2] = "Age: " + newAge.ToString();
+                Console.WriteLine($"{name}'s new age is {newAge} years old");
+            };
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
