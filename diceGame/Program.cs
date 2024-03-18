@@ -29,6 +29,22 @@ void PlayGame()
     }
 }
 
+bool ShouldPlay(){
+    bool notValid = true;
+    do {
+    string result = Console.ReadLine();
+    if (result != null){
+        if(result.ToLower()== "y"){
+            return true;
+        }
+        else if (result.ToLower()== "n"){
+            return false;
+        }
+    }
+    }while(notValid);
+    return false;
+}
+
 string WinOrLose(int roll, int target){
     if(roll > target){
         return "You win!";
