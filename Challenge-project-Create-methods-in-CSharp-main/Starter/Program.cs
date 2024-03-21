@@ -34,6 +34,10 @@ while (!shouldExit)
         break;
     }
     Move();
+    if(EatFood()){
+        ShowFood();
+        ChangePlayer();
+    }
 }
 
 // Returns true if the Terminal was resized 
@@ -41,7 +45,15 @@ bool TerminalResized()
 {
     return height != Console.WindowHeight - 1 || width != Console.WindowWidth - 5;
 }
+bool EatFood(){
+    if(playerX == foodX & playerY==foodY){
+        return true;
+    }
+    else{
+        return false;
+    }
 
+}
 // Displays random food at a random location
 void ShowFood() 
 {
